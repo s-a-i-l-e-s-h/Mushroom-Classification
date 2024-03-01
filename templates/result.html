@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Edible and poisonous mushroom classification by ML{% endblock %}
+{% block content %}
+
+ </br>
+  </br>
+
+	
+     <!-- Main Input For Receiving Query to our ML -->
+  <div class="container">
+   
+
+{% if prediction_text == 0 %}
+	<h2 style="color:blue;">Mushroom is Edible</h2>
+	
+	{% elif prediction_text >= 0.2 %}
+	<h2 style="color:red;">Mushroom is poisonous</h2>
+	
+	{% endif %}
+
+	
+	
+ </div>
+
+   <br>
+   <br>
+
+
+  
+  
+{% endblock %}

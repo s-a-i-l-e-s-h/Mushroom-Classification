@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+{% block title %}Edible and poisonous mushroom classification by ML{% endblock %}
+{% block content %}
+
+  </br>
+  </br>
+
+	
+     <!-- Main Input For Receiving Query to our ML -->
+  <div class="container">
+    <form action="{{ url_for('predict')}}"method="post">
+
+ <div class="row">
+        <div class="col-25">
+          <label for="Start_Latitude">cap-shape:</label>
+         </div>
+        <div class="col-75">
+          <input type="text" name="cap-shape" placeholder="" required="required"/>
+        </div>
+      </div>
+      </br>	
+	  
+
+      <div class="row">
+        <div class="col-25">
+          <label for="Start_Latitude">cap-surface:</label>
+         </div>
+        <div class="col-75">
+          <input type="text" name="cap-surface" placeholder="" required="required"/>
+        </div>
+      </div>
+      </br>
+	  
+	  
+	  
+      <div class="row">
+        <div class="col-25">
+          <label for="Start_Latitude">cap-color:</label>
+         </div>
+        <div class="col-75">
+          <input type="text" name="cap-color" placeholder="" required="required"/>
+        </div>
+      </div>
+      </br>	 
+	  
+      <div class="row">
+        <div class="col-25">
+          <label for="Start_Latitude">odor:</label>
+         </div>
+        <div class="col-75">
+          <input type="text" name="odor" placeholder="" required="required"/>
+        </div>
+      </div>
+      </br>	 
+	  	  
+  <div class="row">
+        <div class="col-25">
+          <label for="Start_Latitude">gill-spacing:</label>
+         </div>
+        <div class="col-75">
+          <input type="text" name="gill-spacing" placeholder="" required="required"/>
+        </div>
+      </div>
+      </br>	 
+	  <div class="row">
+        <div class="col-25">
+          <label for="Start_Latitude">gill-size:</label>
+         </div>
+        <div class="col-75">
+          <input type="text" name="gill-size" placeholder="" required="required"/>
+        </div>
+      </div>
+      </br>	 
+	  <div class="row">
+        <div class="col-25">
+          <label for="Start_Latitude">stalk-shape:</label>
+         </div>
+        <div class="col-75">
+          <input type="text" name="stalk-shape" placeholder="" required="required"/>
+        </div>
+      </div>
+      </br>	 
+	  <div class="row">
+        <div class="col-25">
+          <label for="Start_Latitude">stalk-root:</label>
+         </div>
+        <div class="col-75">
+          <input type="text" name="stalk-root" placeholder="" required="required"/>
+        </div>
+      </div>
+      </br>	 
+	  <div class="row">
+        <div class="col-25">
+          <label for="Start_Latitude">stalk-surface-above-ring:</label>
+         </div>
+        <div class="col-75">
+          <input type="text" name="stalk-surface-above-ring" placeholder="" required="required"/>
+        </div>
+      </div>
+      </br>	 
+	  <div class="row">
+        <div class="col-25">
+          <label for="Start_Latitude">stalk-surface-below-ring:</label>
+         </div>
+        <div class="col-75">
+          <input type="text" name="stalk-surface-below-ring" placeholder="" required="required"/>
+        </div>
+      </div>
+      </br>	 
+	  <div class="row">
+        <div class="col-25">
+          <label for="Start_Latitude">stalk-color-above-ring:</label>
+         </div>
+        <div class="col-75">
+          <input type="text" name="stalk-color-above-ring" placeholder="" required="required"/>
+        </div>
+      </div>
+      </br>	 
+	  <div class="row">
+        <div class="col-25">
+          <label for="Start_Latitude">stalk-color-below-ring:</label>
+         </div>
+        <div class="col-75">
+          <input type="text" name="stalk-color-below-ring" placeholder="" required="required"/>
+        </div>
+      </div>
+      </br>	 
+	  <div class="row">
+        <div class="col-25">
+          <label for="Start_Latitude">veil-color:</label>
+         </div>
+        <div class="col-75">
+          <input type="text" name="veil-color" placeholder="" required="required"/>
+        </div>
+      </div>
+      </br>	 
+	  <div class="row">
+        <div class="col-25">
+          <label for="Start_Latitude">ring-number:</label>
+         </div>
+        <div class="col-75">
+          <input type="text" name="ring-number" placeholder="" required="required"/>
+        </div>
+      </div>
+      </br>	
+	  
+	  <div class="row">
+        <div class="col-25">
+          <label for="Start_Latitude">spore-print-color:</label>
+         </div>
+        <div class="col-75">
+          <input type="text" name="spore-print-color" placeholder="" required="required"/>
+        </div>
+      </div>
+      </br>	 
+
+	  <div class="row">
+        <div class="col-25">
+          <label for="Start_Latitude">population:</label>
+         </div>
+        <div class="col-75">
+          <input type="text" name="population" placeholder="" required="required"/>
+        </div>
+      </div>
+      </br>	 
+	  
+	  
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+     
+    
+
+    </form>
+  </div>
+
+   <br>
+   <br>
+
+  <h2><center><b>{{ prediction_text }}</centre></b></h2>
+  
+  
+{% endblock %}
